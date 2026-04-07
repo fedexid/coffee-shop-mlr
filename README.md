@@ -87,18 +87,18 @@
 ### Base Model - Residual Plot
 
 - Residual Plot shows heteroscedasticity which is the reasons why log transformation is applied
-  ![Residual Plot - Base Model](image-1.png)
+  <img src="image-1.png" alt="Residual Plot - Base Model" width="500" height="350">
 
 ### Log Model - Actual vs Predicted
 
 - Log model predictions align closely with actual revenue. More clear linearity
-  ![Actual vs Predicted - Log Model](image.png)
+  <img src="image.png" alt="Actual vs Predicted - Log Model" width="500" height="350">
 
 ### Log Model - Residual Plot
 
 - Residuals are more randomly distributed around zero
-- The log transformation appears to improve the model fit and stabilize variance but may not fully resolve issues for very high revenue predictions.
-  ![Residual Plot - Log Model](image-2.png)
+- The log transformation appears to improve the model fit and stabilize variance but may not fully resolve issues for very high revenue predictions.  
+  <img src="image-2.png" alt="Residual Plot - Log Model" width="500" height="350">
 
 ## Things to Improve
 

@@ -12,7 +12,7 @@
 
 - **Source**: https://www.kaggle.com/datasets/ahmedabbas757/coffee-sales
 - **Size**: 149116 Rows and 11 Columns
-- **Target Variable**: "revenue" **($\text{transaction\_qty} \times \text{unit\_price}$)**
+- **Target Variable**: "revenue" **(`transaction_qty * unit_price`)**
 - **Features Variables**: "time_period" (morning, afternoon, nigth), "product_category", "store_location", "day_of_week"
 
 ## Tech Stack
@@ -28,7 +28,7 @@
 
 1. **Exploratory Data Analysis (EDA)**: Check Statistics, Missing Values, and Info
 2. **Feature Engineering**:
-   - Create new "revenue" column **($\text{unit\_price} \times \text{qty}$)**
+   - Create new "revenue" column **(`unit_price * qty`)**
    - Split transaction time into period (morning, afternoon, and night)
    - Getting the day of the week from transaction date
 3. **Aggregated Data**: Groups sales by time of day, product category, store location, and day of the week. Then calculates the total revenue for each group.

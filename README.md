@@ -77,7 +77,7 @@
 ## OLS Assumptions
 
 - Linearity: The model assumes a straight-line relationship between the features (like time period, product category, store location, and day) and revenue. Since we used one-hot encoding, this works fine.
-- Exogeneity:
+- Exogeneity: Uncertain, likely endogeneity because of omitted variable bias
 - Homoscedasticity: The base model violates homoscedasticity. After applying a log transformation, this improved, though there’s still a bit of unevenness for higher revenue values.
 - No Autocorrelation: Each row represents a unique combination of factors, so they’re treated as independent. But because the data comes from time-based transactions, there might still be some hidden time-related patterns.
 - No Multicollinearity: Low Variance Influence Factor (VIF) indicates that all features have low correlation score

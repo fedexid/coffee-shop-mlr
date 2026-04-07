@@ -63,11 +63,11 @@
 - **Base Model**:
   - `product_category_Coffee` and `product_category_Tea` has the highest positive coefficient, meaning it contributes most to revenue
   - `morning` period is the time period that generates more revenue
-  - `monday` and `tuesday` are the days of the week that generates more revenue
+  - `monday` and `wednesday` are the days of the week that generates more revenue
   - Rest of the features, have a negative coefficients which indicates they are associated with a decrease in revenue, holding other variables constant
 - **Log Transformation Model**:
-  - `product_category_Coffee` has the highest positive coefficients with the value of $1.275342$. Because of `log1p` transformation, this means we can expect an increase in revenue by 2.58 units per transaction
-  - `product_category_Packaged Chocolate` has the largest negative coefficient, with a value of $-2.939795$. Because of the `log1p` transformation, this means we can expect a decrease in revenue of approximately 0.95 units per transaction.
+  - `product_category_Coffee` has the highest positive coefficient ($1.275$), implying approximately a 258% increase in (1 + revenue) per transaction
+  - `product_category_Packaged Chocolate` has the largest negative coefficient ($−2.94$), suggesting that transactions in this category generate roughly 95% lower revenue per transaction, all else equal.
 
 ## Variance Inflation Factor (VIF)
 
@@ -76,8 +76,8 @@
 
 # OLS Assumptions
 
-- Linearity: 
+- Linearity: The model assumes a straight-line relationship between the features (like time period, product category, store location, and day) and revenue. Since we used one-hot encoding, this works fine.
 - Exogeneity:
-- Homoscedasticity:
-- No Autocorrelation:
+- Homoscedasticity: The base model violates homoscedasticity. After applying a log transformation, this improved, though there’s still a bit of unevenness for higher revenue values.
+- No Autocorrelation: Each row represents a unique combination of factors, so they’re treated as independent. But because the data comes from time-based transactions, there might still be some hidden time-related patterns.
 - No Multicollinearity: Low Variance Influence Factor (VIF) indicates that all features have low correlation score
